@@ -2,7 +2,7 @@ package kalkulator;
 
 /**
  *
- * @author USER
+ * @author Hafshy Yazid A. - 13518051
  */
 public class kurangEkspresi implements duaEkspresi {
     // memiliki atribut sebanyak dua ekspresi
@@ -11,13 +11,15 @@ public class kurangEkspresi implements duaEkspresi {
     // memilki constructor default
     // mengisi nilai x = y = 0
     public kurangEkspresi() {
-        
+        this.x = new ekspresi(0);
+        this.y = new ekspresi(0);
     }
     
     // memiliki constructor yang menerima dua parameter ekspresi
     // mengisi nilai x = _x dan y = _y
     public kurangEkspresi(ekspresi _x, ekspresi _y) {
-        
+        this.x = _x;
+        this.y = _y;
     }
     
     /**
@@ -26,6 +28,6 @@ public class kurangEkspresi implements duaEkspresi {
      */
     @Override
     public double getHasil() {
-       return 0;
+       return (this.x.getNilai() - this.y.getNilai());
     }
 }
