@@ -2,7 +2,7 @@ package kalkulator;
 
 /**
  *
- * @author USER
+ * @author Hafshy Yazid A. - 13518051
  */
 public class tambahEkspresi implements duaEkspresi {
     // memiliki atribut sebanyak dua ekspresi
