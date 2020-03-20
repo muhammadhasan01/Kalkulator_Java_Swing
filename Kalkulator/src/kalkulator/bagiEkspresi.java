@@ -2,7 +2,7 @@ package kalkulator;
 
 /**
  *
- * @author USER
+ * @author Radhinansyah H.G - 13518087
  */
 public class bagiEkspresi implements duaEkspresi {
     // memiliki atribut sebanyak dua ekspresi
@@ -11,13 +11,15 @@ public class bagiEkspresi implements duaEkspresi {
     // memilki constructor default
     // mengisi nilai x = y = 0
     public bagiEkspresi() {
-        
+        this.x.setNilai(0);
+        this.y.setNilai(0);
     }
     
     // memiliki constructor yang menerima dua parameter ekspresi
     // mengisi nilai x = _x dan y = _y
     public bagiEkspresi(ekspresi _x, ekspresi _y) {
-        
+        this.x.setNilai(_x.getNilai());
+        this.y.setNilai(_y.getNilai());
     }
     
     /**
@@ -27,6 +29,11 @@ public class bagiEkspresi implements duaEkspresi {
      */
     @Override
     public double getHasil() {
-       return 0;
+        if (this.y.getNilai() == 0){
+            throw new ArithmeticException("Tidak bisa membagi suatu bilangan dengan 0");
+        }
+        else{
+            return this.x.getNilai()/this.y.getNilai();
+        }
     }
 }
