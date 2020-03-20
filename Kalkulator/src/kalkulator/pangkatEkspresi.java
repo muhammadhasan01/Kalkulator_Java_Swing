@@ -1,4 +1,3 @@
-// contoh dalam pengisian [...]Ekspresi.java
 package kalkulator;
 
 /**
@@ -12,12 +11,14 @@ public class pangkatEkspresi implements duaEkspresi {
     // memilki default constructor
     // isi x = 0 dan y = 1
     public pangkatEkspresi() {
-        
+        this.x = new ekspresi(0);
+        this.y = new ekspresi(0);
     }
     
     // memiliki constructor yang menerima dua ekspresi
     public pangkatEkspresi(ekspresi _x, ekspresi _y) {
-        
+        this.x = _x;
+        this.y = _y;
     }
 
     /**
@@ -26,6 +27,6 @@ public class pangkatEkspresi implements duaEkspresi {
      */
     @Override
     public double getHasil() {
-       return -1;
+       return Math.pow(this.x.getNilai(), this.y.getNilai());
     }
 }
