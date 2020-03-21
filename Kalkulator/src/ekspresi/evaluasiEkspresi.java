@@ -25,6 +25,21 @@ public class evaluasiEkspresi {
         this.masukan = inp;
     }
     
+    public void cekValid() {
+        int cnt = 0;
+        for (int i = 0; i < this.masukan.length(); i++) {
+            char cur = this.masukan.charAt(i);
+            if (i > 0 && this.masukan.charAt(i - 1) == '-' && cur == '-') {
+                throw new RuntimeException("Bilangan tidak valid");
+            } else if (('0' <= cur && cur <= '9') || (cur == '.')) {
+                if (cur == '.') cnt++;
+                if (cnt > 1) throw new RuntimeException("Bilangan tidak valid");
+            } else {
+                cnt = 0;
+            }
+        }
+    }
+    
     // ubah Ans menjadi nilai yang seharusnya
     public String ubahEkspresi() {
         String hasil = "";
@@ -140,6 +155,7 @@ public class evaluasiEkspresi {
                     x = pecahEkspresi();
                     AdvChar(')');
                 } else if ((CC >= '0' && CC <= '9') || CC == '.') {
+                    int cnt = 0;
                     while ((CC >= '0' && CC <= '9') || CC == '.') charBerikutnya();
                     x.setNilai(Double.parseDouble(str.substring(startPosisi, this.posisi)));
                 } else if (CC >= 'a' && CC <= 'z') {

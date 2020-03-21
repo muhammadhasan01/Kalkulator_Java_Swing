@@ -456,8 +456,9 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        evaluasiEkspresi eval = new evaluasiEkspresi(jTextField1.getText());
         try {
+            evaluasiEkspresi eval = new evaluasiEkspresi(jTextField1.getText());
+            eval.cekValid();
             ekspresi hasilEval = eval.hasilEvaluasi();
             jTextField1.setText(Double.toString(hasilEval.getNilai()));
             nilaiAns = hasilEval.getNilai();
