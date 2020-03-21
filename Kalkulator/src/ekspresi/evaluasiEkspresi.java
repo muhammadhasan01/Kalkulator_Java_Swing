@@ -106,7 +106,7 @@ public class evaluasiEkspresi {
                 charBerikutnya();
                 ekspresi x = pecahEkspresi();
                 if (posisi < str.length())
-                    throw new RuntimeException("Terjadi syntax error");
+                    throw new RuntimeException("Terdapat syntax error");
                 return x;
             }
             
@@ -169,7 +169,7 @@ public class evaluasiEkspresi {
                         throw new RuntimeException("Fungsi tidak diketahui : " + (char) CC);
                     }
                 } else {
-                    throw new RuntimeException("Terjadi syntax error");
+                    throw new RuntimeException("Terdapat syntax error");
                 }
                 
                 if (AdvChar('^')) {
