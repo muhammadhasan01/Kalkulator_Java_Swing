@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kalkulator;
+package ekspresi;
+
+import kalkulator.Kalkulator;
 
 /**
  *
@@ -43,10 +45,30 @@ public class evaluasiEkspresi {
         return hasil;
     }
     
+    // lakukan method overloading, dengan string yg diinginkan saja
+    public String ubahEkspresi(String str) {
+        String hasil = "";
+        for (int i = 0; i < str.length(); i++) {
+            switch (str.charAt(i)) {
+                case 'A':
+                    hasil += Double.toString(Kalkulator.nilaiAns);
+                    i += 2;
+                    break;
+                case '√':
+                    hasil += "s";
+                    break;
+                default:
+                    hasil += str.charAt(i);
+                    break;
+            }
+        }
+        return hasil;
+    }
+    
     // lakukan parse sekaligus evaluasi
-    public double hasilEvaluasi() {
+    public ekspresi hasilEvaluasi() {
         String str = this.ubahEkspresi();
-        if (str.equals("")) return 0.0;
+        if (str.equals("")) return new ekspresi();
      
         return new Object() {
             
@@ -65,58 +87,68 @@ public class evaluasiEkspresi {
                 return false;
             }
             
-            double pecah() {
+            ekspresi pecah() {
                 charBerikutnya();
-                double x = pecahEkspresi();
+                ekspresi x = pecahEkspresi();
                 if (posisi < str.length())
                     throw new RuntimeException("Terjadi syntax error");
                 return x;
             }
             
-            double pecahEkspresi() {
-                double x = pecahIstilah();
+            ekspresi pecahEkspresi() {
+                ekspresi x = pecahIstilah();
                 while (true) {
                     if (AdvChar('+')) {
-                        x += pecahIstilah();
+                        tambahEkspresi t = new tambahEkspresi(x, pecahIstilah());
+                        x.setNilai(t.getHasil());
                     } else if (AdvChar('-')) {
-                        x -= pecahIstilah();
+                        kurangEkspresi k = new kurangEkspresi(x, pecahIstilah());
+                        x.setNilai(k.getHasil());
                     } else {
                         return x;
                     }
                 }
             }
             
-            double pecahIstilah() {
-                double x = pecahFaktor();
+            ekspresi pecahIstilah() {
+                ekspresi x = pecahFaktor();
                 while (true) {
                     if (AdvChar('*')) {
-                        x *= pecahFaktor();
+                        kaliEkspresi k = new kaliEkspresi(x, pecahFaktor());
+                        x.setNilai(k.getHasil());
                     } else if (AdvChar('/')) {
-                        x /= pecahFaktor();
+                        bagiEkspresi b = new bagiEkspresi(x, pecahFaktor());
+                        x.setNilai(b.getHasil());
                     } else {
                         return x;
                     }
                 }
             }
             
-            double pecahFaktor() {
+            ekspresi pecahFaktor() {
                 if (AdvChar('+')) return pecahFaktor();
-                if (AdvChar('-')) return -pecahFaktor();
+                if (AdvChar('-')) {
+                    ekspresi t = pecahFaktor();
+                    t.setNilai(-t.getNilai());
+                    return t;
+                }
                 
-                double x;
+                ekspresi x = new ekspresi();
                 int startPosisi = this.posisi;
+                
                 if (AdvChar('(')) {
                     x = pecahEkspresi();
                     AdvChar(')');
                 } else if ((CC >= '0' && CC <= '9') || CC == '.') {
                     while ((CC >= '0' && CC <= '9') || CC == '.') charBerikutnya();
-                    x = Double.parseDouble(str.substring(startPosisi, this.posisi));
+                    x.setNilai(Double.parseDouble(str.substring(startPosisi, this.posisi)));
                 } else if (CC >= 'a' && CC <= 'z') {
                     while (CC >= 'a' && CC <= 'z') charBerikutnya();
                     String fungsi = str.substring(startPosisi, this.posisi);
                     x = pecahFaktor();
                     if (fungsi.equals("s")) {
-                        x = Math.sqrt(x);
+                        akarEkspresi k = new akarEkspresi(x);
+                        x.setNilai(k.getHasil());
                     } else {
                         throw new RuntimeException("Fungsi tidak diketahui : " + (char) CC);
                     }
@@ -124,7 +156,10 @@ public class evaluasiEkspresi {
                     throw new RuntimeException("Terjadi syntax error");
                 }
                 
-                if (AdvChar('^')) x = Math.pow(x, pecahFaktor());
+                if (AdvChar('^')) {
+                    pangkatEkspresi p = new pangkatEkspresi(x, pecahFaktor());
+                    x.setNilai(p.getHasil());
+                }
                 
                 return x;
             }

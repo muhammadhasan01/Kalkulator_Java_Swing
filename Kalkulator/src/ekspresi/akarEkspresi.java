@@ -1,4 +1,4 @@
-package kalkulator;
+package ekspresi;
 
 /**
  *
@@ -7,11 +7,11 @@ package kalkulator;
 public class akarEkspresi extends ekspresi {
     private ekspresi x;
     
-    public akarEkspresi(){
+    public akarEkspresi() {
         this.x = new ekspresi(0);
     }
     
-    public akarEkspresi(ekspresi _x){
+    public akarEkspresi(ekspresi _x) {
         this.x = _x;
     }
     
@@ -21,7 +21,7 @@ public class akarEkspresi extends ekspresi {
         if (num < 0) {
             // lakukan throw
             throw new ArithmeticException("Tidak bisa mengakarkan bilangan negatif");
-        }else{
+        } else {
             return Math.sqrt(num);
         }
     }

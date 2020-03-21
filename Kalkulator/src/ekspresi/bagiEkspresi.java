@@ -1,4 +1,4 @@
-package kalkulator;
+package ekspresi;
 
 /**
  *
@@ -11,15 +11,15 @@ public class bagiEkspresi implements duaEkspresi {
     // memilki constructor default
     // mengisi nilai x = y = 0
     public bagiEkspresi() {
-        this.x.setNilai(0);
-        this.y.setNilai(0);
+        this.x = new ekspresi(0);
+        this.y = new ekspresi(0);
     }
     
     // memiliki constructor yang menerima dua parameter ekspresi
     // mengisi nilai x = _x dan y = _y
     public bagiEkspresi(ekspresi _x, ekspresi _y) {
-        this.x.setNilai(_x.getNilai());
-        this.y.setNilai(_y.getNilai());
+        this.x = _x;
+        this.y = _y;
     }
     
     /**
@@ -29,11 +29,10 @@ public class bagiEkspresi implements duaEkspresi {
      */
     @Override
     public double getHasil() {
-        if (this.y.getNilai() == 0){
+        if (this.y.getNilai() == 0) {
             throw new ArithmeticException("Tidak bisa membagi suatu bilangan dengan 0");
-        }
-        else{
-            return this.x.getNilai()/this.y.getNilai();
+        } else {
+            return this.x.getNilai() / this.y.getNilai();
         }
     }
 }

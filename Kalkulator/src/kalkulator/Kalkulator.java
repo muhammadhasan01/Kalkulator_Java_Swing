@@ -5,6 +5,10 @@
  */
 package kalkulator;
 
+import ekspresi.evaluasiEkspresi;
+import ekspresi.ekspresi;
+import tombol.tombolMC;
+
 /**
  *
  * @author mhasan01
@@ -454,9 +458,9 @@ public class Kalkulator extends javax.swing.JFrame {
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         evaluasiEkspresi eval = new evaluasiEkspresi(jTextField1.getText());
         try {
-            double hasilEval = eval.hasilEvaluasi();
-            jTextField1.setText(Double.toString(hasilEval));
-            nilaiAns = hasilEval;
+            ekspresi hasilEval = eval.hasilEvaluasi();
+            jTextField1.setText(Double.toString(hasilEval.getNilai()));
+            nilaiAns = hasilEval.getNilai();
         } catch (Exception e) {
             jTextField1.setText(e.getMessage());
         }

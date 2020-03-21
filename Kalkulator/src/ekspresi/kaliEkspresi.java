@@ -1,4 +1,4 @@
-package kalkulator;
+package ekspresi;
 
 /**
  *
@@ -11,15 +11,15 @@ public class kaliEkspresi implements duaEkspresi {
     // memilki constructor default
     // mengisi nilai x = y = 0
     public kaliEkspresi() {
-        this.x.setNilai(0);
-        this.y.setNilai(0);
+        this.x = new ekspresi(0);
+        this.y = new ekspresi(0);
     }
     
     // memiliki constructor yang menerima dua parameter ekspresi
     // mengisi nilai x = _x dan y = _y
     public kaliEkspresi(ekspresi _x, ekspresi _y) {
-        this.x.setNilai(_x.getNilai());
-        this.y.setNilai(_y.getNilai());
+        this.x = _x;
+        this.y = _y;
     }
     
     /**
@@ -28,6 +28,6 @@ public class kaliEkspresi implements duaEkspresi {
      */
     @Override
     public double getHasil() {
-       return this.x.getNilai()*this.y.getNilai();
+       return this.x.getNilai() * this.y.getNilai();
     }
 }

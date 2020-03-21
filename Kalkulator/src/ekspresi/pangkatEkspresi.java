@@ -1,18 +1,18 @@
-package kalkulator;
+package ekspresi;
 
 /**
  *
- * @author USER
+ * @author Dimas Wahyu Langkawi - 13518069
  */
 public class pangkatEkspresi implements duaEkspresi {
     // memilki dua ekspresi
     private ekspresi x, y;
     
     // memilki default constructor
-    // isi x = 0 dan y = 1
+    // isi x = 1 dan y = 1
     public pangkatEkspresi() {
-        this.x = new ekspresi(0);
-        this.y = new ekspresi(0);
+        this.x = new ekspresi(1);
+        this.y = new ekspresi(1);
     }
     
     // memiliki constructor yang menerima dua ekspresi
@@ -23,7 +23,7 @@ public class pangkatEkspresi implements duaEkspresi {
 
     /**
      *
-     * @return hasil nilai dari ...
+     * @return hasil nilai dari x^y
      */
     @Override
     public double getHasil() {

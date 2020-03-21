@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package kalkulator;
+package tombol;
 
 import java.util.Queue;
 import java.util.LinkedList;
 /**
  *
- * @author USER
+ * @author Muhammad Hasan - 13518012
  */
 public class tombolMC {
     // menggunakan queue bawaan generik
