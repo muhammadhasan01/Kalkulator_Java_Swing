@@ -535,14 +535,29 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if (overWrite) {
+            jTextField1.setText("+");
+            overWrite = false;
+            return;
+        }
         jTextField1.setText(jTextField1.getText() + "+");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        if (overWrite) {
+            jTextField1.setText("-");
+            overWrite = false;
+            return;
+        }
         jTextField1.setText(jTextField1.getText() + "-");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        if (overWrite) {
+            jTextField1.setText("/");
+            overWrite = false;
+            return;
+        }
         jTextField1.setText(jTextField1.getText() + "/");
     }//GEN-LAST:event_jButton21ActionPerformed
 
@@ -574,18 +589,38 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        if (overWrite) {
+            jTextField1.setText("√");
+            overWrite = false;
+            return;
+        }
         jTextField1.setText(jTextField1.getText() + "√");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if (overWrite) {
+            jTextField1.setText("(");
+            overWrite = false;
+            return;
+        }
         jTextField1.setText(jTextField1.getText() + "(");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        if (overWrite) {
+            jTextField1.setText(")");
+            overWrite = false;
+            return;
+        }
         jTextField1.setText(jTextField1.getText() + ")");
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        if (overWrite) {
+            jTextField1.setText("^");
+            overWrite = false;
+            return;
+        }
         jTextField1.setText(jTextField1.getText() + "^");
     }//GEN-LAST:event_jButton20ActionPerformed
 
