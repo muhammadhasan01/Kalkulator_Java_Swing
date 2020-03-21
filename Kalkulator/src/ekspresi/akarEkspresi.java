@@ -16,6 +16,7 @@ public class akarEkspresi extends ekspresi {
     }
     
     // menghasilkan nilai pengakaran ekspresi
+    @Override
     public double getHasil() {
         double num = this.x.getNilai(); // isi nilai num dengan this.getNilai()
         if (num < 0) {

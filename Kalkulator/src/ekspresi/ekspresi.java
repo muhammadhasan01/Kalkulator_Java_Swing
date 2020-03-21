@@ -27,4 +27,8 @@ public class ekspresi {
     public double getNilai() {
         return this.nilai;
     }
+    
+    public double getHasil() {
+        return this.nilai;
+    }
 }

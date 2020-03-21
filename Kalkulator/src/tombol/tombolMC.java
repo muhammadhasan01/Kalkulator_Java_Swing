@@ -13,7 +13,7 @@ import java.util.LinkedList;
  * @author Muhammad Hasan - 13518012
  */
 public class tombolMC {
-    // menggunakan queue bawaan generik
+    // menggunakan queue generik bawaan
     public static Queue<Double> q = new LinkedList<>();
     
     // melakukan push ke dalam queue
