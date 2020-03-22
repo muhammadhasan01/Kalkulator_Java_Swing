@@ -9,7 +9,7 @@
 | Dimas Wahyu Langkawi      | 13518069 |
 | Radhinansyah Hemsa Ghaida | 13518087 |
 
-Dalam Tugas Besar *Object-Oriented Programming* (IF2210) kali ini, kelompok kami (Kelompok 04 - K03) telah membuat Aplikasi Kalkulator yang dapat memenuhi bebererapa kebutuhan tertentu.
+Dalam **Tugas Besar *Object-Oriented Programming* (IF2210)** kali ini, kelompok kami (Kelompok 04 - K03) telah membuat Aplikasi Kalkulator yang dapat memenuhi bebererapa kebutuhan tertentu.
 
 ## Aplikasi Kalkulator
 
@@ -27,8 +27,8 @@ Struktur kode dari Aplikasi Kalkulator dapat dilihat pada gambar berikut:
 
 Berikut adalah tata cara dalam menjalankan aplikasi kalkulator:
 1. Download dan install terlebih dahulu **[NetBeans](https://netbeans.org/community/releases/82/install.html)**.
-2. Download Repo ini dalam bentuk zip dan ekstrak zip tersebut. (Jika belum mempunyai folder tugasBesarOOP ini)
-3. Jalankan NetBeans, kemudian pada menu **File**, buka **Open Project** (bisa juga dengan **CTRL + SHIFT + O**), lalu buka folder **tugasBesarOOP** dan pilih project **Kalkulator** seperti pada gambar berikut:
+2. Download Repository ini dalam bentuk zip dan ekstrak zip tersebut. (Jika belum mempunyai folder tugasBesarOOP ini)
+3. Jalankan **NetBeans**, kemudian pada menu **File**, buka **Open Project** (bisa juga dengan **CTRL + SHIFT + O**), lalu buka folder **tugasBesarOOP** dan pilih project **Kalkulator** seperti pada gambar berikut:
 
 ![openProject](/assets/images/projek.png)
 
