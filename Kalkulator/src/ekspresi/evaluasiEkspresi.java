@@ -27,10 +27,12 @@ public class evaluasiEkspresi {
     
     public void cekValid() {
         int cnt = 0;
+        int op = 0;
         for (int i = 0; i < this.masukan.length(); i++) {
             char cur = this.masukan.charAt(i);
-            if (i > 0 && this.masukan.charAt(i - 1) == '-' && cur == '-') {
-                throw new RuntimeException("Bilangan tidak valid");
+            if (i > 0 && this.masukan.charAt(i - 1) == cur) {
+                if (cur == '+' || cur == '-')
+                    throw new RuntimeException("Bilangan tidak valid");
             } else if (('0' <= cur && cur <= '9') || (cur == '.')) {
                 if (cur == '.') cnt++;
                 if (cnt > 1) throw new RuntimeException("Bilangan tidak valid");

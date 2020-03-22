@@ -14,10 +14,10 @@ import java.util.LinkedList;
  */
 public class tombolMC {
     // menggunakan queue generik bawaan
-    public static Queue<Double> q = new LinkedList<>();
+    private static Queue<Double> q = new LinkedList<>();
     
     // melakukan push ke dalam queue
-    public static void Push(Double x) {
+    public static void Push(double x) {
         q.add(x);
     }
     
