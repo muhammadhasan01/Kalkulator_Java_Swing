@@ -163,7 +163,7 @@ public class evaluasiEkspresi {
                     String fungsi = str.substring(startPosisi, this.posisi);
                     x = pecahFaktor();
                     if (fungsi.equals("s")) {
-                        akarEkspresi k = new akarEkspresi(x);
+                        akarEkspresi k = new akarEkspresi(x.getNilai());
                         x.setNilai(k.getHasil());
                     } else {
                         throw new RuntimeException("Fungsi tidak diketahui : " + (char) CC);
