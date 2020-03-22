@@ -15,7 +15,7 @@ Dalam Tugas Besar *Object-Oriented Programming* (IF2210) kali ini, kelompok kami
 
 ![Tampilan_Kalkulator](/assets/images/kalkulator.png)
 
-Aplikasi Kalkulator adalah aplikasi yang dibuat menggunakan bahasa pemrograman Java dengan GUI Swing. Aplikasi Kalkulator ini sesuai namanya, merupakan suatu kalkulator yang dapat melakukan perhitungan operasi dari ekspresi matematika seperti pertambahan, pengurangan, pengalian, dan pembagian.
+**Aplikasi Kalkulator** adalah aplikasi yang dibuat menggunakan bahasa pemrograman *Java* dengan *GUI Swing*. Aplikasi Kalkulator ini sesuai namanya, merupakan suatu kalkulator yang dapat melakukan perhitungan operasi dari ekspresi matematika seperti pertambahan, pengurangan, pengalian, dan pembagian.
 
 ## Struktur Kode
 
