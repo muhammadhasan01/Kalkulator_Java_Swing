@@ -16,8 +16,7 @@ import tombol.tombolMC;
 public class Kalkulator extends javax.swing.JFrame {
     
     public static double nilaiAns = 1.0;
-    public static boolean overWrite = false;
-    public static tombolMC Q = new tombolMC();
+    public static boolean overWrite = false; 
 
     /**
      * Creates new form Kalkulator
@@ -582,12 +581,7 @@ public class Kalkulator extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         try {
-            if (overWrite) {
-                jTextField1.setText(Double.toString(Q.Pop()));
-                overWrite = false;
-                return;
-            }
-            jTextField1.setText(jTextField1.getText() + Double.toString(Q.Pop()));
+            jTextField1.setText(Double.toString(tombolMC.Pop()));
         } catch (Exception e) {
             jTextField1.setText(e.getMessage());
             overWrite = true;
@@ -631,7 +625,7 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        Q.Push(nilaiAns);
+        tombolMC.Push(nilaiAns);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
