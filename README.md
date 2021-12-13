@@ -1,17 +1,6 @@
-# Tugas Besar Pemrograman Berorientasi Objek (IF2210) - Kelompok 04 - K03
+# Aplikasi Kalkulator
 
-### Anggota Kelompok
-
-| Nama Anggota              | NIM      |
-|---------------------------|----------|
-| Muhammad Hasan            | 13518012 |
-| Hafshy Yazid Albisthamy   | 13518051 |
-| Dimas Wahyu Langkawi      | 13518069 |
-| Radhinansyah Hemsa Ghaida | 13518087 |
-
-Dalam **Tugas Besar *Object-Oriented Programming* (IF2210)** kali ini, kelompok kami (Kelompok 04 - K03) telah membuat Aplikasi Kalkulator yang dapat memenuhi bebererapa kebutuhan tertentu.
-
-## Aplikasi Kalkulator
+## Tampilan
 
 ![Tampilan_Kalkulator](/assets/images/kalkulator.png)
 
@@ -40,3 +29,12 @@ Berikut adalah tata cara dalam menjalankan aplikasi kalkulator:
 6. Setelah di run, aplikasi kalkulator akan muncul dan siap untuk digunakan.
 
 ![tampilanUtama](/assets/images/tampilanUtama.png)
+
+### Anggota Kelompok
+
+| Nama Anggota              | NIM      |
+|---------------------------|----------|
+| Muhammad Hasan            | 13518012 |
+| Hafshy Yazid Albisthamy   | 13518051 |
+| Dimas Wahyu Langkawi      | 13518069 |
+| Radhinansyah Hemsa Ghaida | 13518087 |
